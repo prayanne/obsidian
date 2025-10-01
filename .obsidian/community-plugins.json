@@ -16,5 +16,12 @@
   "templater-obsidian",
   "code-styler",
   "card-board",
-  "pseudocode-in-obs"
+  "pseudocode-in-obs",
+  "automatic-table-of-contents",
+  "advanced-canvas",
+  "obsidian-dictionary-plugin",
+  "excalibrain",
+  "highlightr-plugin",
+  "obsidian-mind-map",
+  "tasks-calendar-wrapper"
 ]
