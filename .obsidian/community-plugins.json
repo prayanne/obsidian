@@ -13,5 +13,8 @@
   "obsidian-style-settings",
   "tag-wrangler",
   "obsidian-tasks-plugin",
-  "templater-obsidian"
+  "templater-obsidian",
+  "code-styler",
+  "card-board",
+  "pseudocode-in-obs"
 ]
