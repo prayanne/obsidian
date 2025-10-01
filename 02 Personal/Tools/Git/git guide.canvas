@@ -1,0 +1,50 @@
+{
+	"nodes":[
+		{
+			"id":"2b41f08209a7f276",
+			"type":"text",
+			"text":"Git Auth",
+			"styleAttributes":{},
+			"x":-100,
+			"y":-340,
+			"width":260,
+			"height":60
+		},
+		{"id":"72a95c245093885d","type":"link","url":"https://www.hahwul.com/blog/2018/git-credential-helper/","x":-200,"y":-140,"width":460,"height":480},
+		{
+			"id":"40338aeb89073a66",
+			"type":"text",
+			"text":"git commends",
+			"styleAttributes":{},
+			"x":-230,
+			"y":-1120,
+			"width":260,
+			"height":60
+		},
+		{"id":"c053eefe2af78e61","type":"link","url":"https://sseozytank.tistory.com/41","x":-300,"y":-880,"width":400,"height":400}
+	],
+	"edges":[
+		{
+			"id":"c94e51f5856359bb",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"2b41f08209a7f276",
+			"fromSide":"bottom",
+			"toNode":"72a95c245093885d",
+			"toSide":"top"
+		},
+		{
+			"id":"c3caca6dd5b8f18e",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"40338aeb89073a66",
+			"fromSide":"bottom",
+			"toNode":"c053eefe2af78e61",
+			"toSide":"top"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
