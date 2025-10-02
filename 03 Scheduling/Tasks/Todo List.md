@@ -15,6 +15,7 @@ kanban-plugin: board
 - [ ] Obsidian - Tag
 - [ ] Univ-Soft - Notion - Algorithm
 - [ ] Notion - Obsidian rinked
+- [ ] 자바 Anotation
 
 
 ## ⏫ 최우선 공부
