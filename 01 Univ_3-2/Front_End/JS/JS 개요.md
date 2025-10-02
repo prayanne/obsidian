@@ -1,4 +1,5 @@
-
+```table-of-contents
+```
 # 발단
 - liveScript
 	- 넷스케이프사
@@ -117,7 +118,7 @@
 - HTML에 포함 시키는 방식
 	- 인라인 JS
 		- Attribute에서 지정
-		- <button type="button" onclick="func()"></button>
+		- `<button type="button" onclick="func()"></button>`
 	- 웹 문서 내장
 		- Tag - Script
 		- 위치
@@ -184,7 +185,7 @@
 ## 형 변환
 ### 암시적 형 변환
 	1. 자바 스크립트 엔진이 자동으로 수행
-```
+```js
 let number = 20;
 let string = '24';
 let resultA = number + string;
@@ -198,7 +199,7 @@ type_casting_imp.js
 ```
 ### 명시적 형 변환
 	1. 개발자가 직접 형 변환
-```
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -298,3 +299,158 @@ document.write(valueC + ‘ ‘ + typeof valueC + "<br><br>");
 - JS code를 디버깅 할 때 많이 사용하는 함수
 - 크롬 브라우저에서 디버깅
 - 개발자 모드에서 console 진입
+
+
+
+<hr>
+
+# 객체
+
+## 특징
+- 자바스크립트 객체는 속성 (property)과 메소드 (method)를 가짐
+- 객체의 속성 값으로 또 다른 객체 포함 가능
+	- 계층적 구조
+- 자바스크립트 내장 객체와 사용자가 정의한 객체 사용
+
+## 내장 객체
+- 자바스크립트에서 기본적으로 제공되는 객체
+	- Array
+	- Date
+	- Math
+	- String
+- 웹 브라우저가 제공하는 window와 navigator (다음 장에서 설명)
+
+## Array 객체
+
+### 배열의 생성
+- new 연산자 이용
+- 배열 리터럴을 이용
+
+### 배열 요소의 접근
+
+- 배열이름[인덱스]와 같이 각괄호 ([ ])를 이용해 접근
+
+1. 
+```js
+var book_arr = new Array(“자바스크립트", “E516", 2, 34);
+// 배열의 내용
+// book_arr[0]: " 자바스크립트 "
+// book_arr[1]: “E516“
+// book_arr[2]: 2
+// book_arr[3]: 34
+var book_arr2 = ["자바스크립트", “E516", ", 2, 34];
+var arr100 = new Array(100); // 요소 갯수가 100인 배열 생성
+```
+
+2. 
+```js
+<html><body>
+<script type = "text/javascript" >
+
+var arr = new Array("one", 2, "3", 4, "five");
+// arr 내용 = ["one", 2, "3", 4, "five"]
+
+arr[6] = 6;
+arr[7] = "seven";
+arr[9] = "3+6";
+// arr 내용: ["one", 2, "3", 4, "five", undefined, 6, "seven", undefined, "3+6"]
+
+document.write("length of array: " + arr.length + "<br/>");
+
+document.write("arr = [");
+for(i=0;i<arr.length;i++) document.write(" " + arr[i] + " ");
+document.write("] <br/> ");
+
+arr.length = 3;
+document.write("length of array: " + arr.length + "<br/>");
+
+document.write("arr = [");
+for(i=0;i<arr.length;i++) document.write(" " + arr[i] + " ");
+document.write("] <br/> ");
+
+document.write("arr[" + 100 + "]: " + arr[100] + "<br/>");
+document.write("length of array: " + arr.length + "<br/>");
+
+arr[100] = 100;
+document.write("arr[" + 100 + "]: " + arr[100] + "<br/>");
+document.write("length of array: " + arr.length + "<br/>");
+
+</script>
+</body></html>
+```
+
+### 배열 객체의 메소드
+- reverse()
+	- 배열 내 요소들의 순서를 반대로 바꾸는 기능
+- sort()
+	- 배열 내 요소들의 순서를 오름차순으로 정렬
+	- 숫자가 문자보다 앞에 정렬됨
+- join()
+	- 배열 내 요소를 모두 합쳐서 하나의 문자열로 만들어 줌 
+	- 이 때 요소 사이에 끼워 넣을 문자열 지정 가능
+- concat()
+	- 배열의 뒤에 요소를 붙혀서 (concatenation) 배열의 내용
+추가
+- slice()
+	- 배열의 요소들 중 일부만을 배열로 만들어서 리턴.
+	- 사용 형식은 array.slice(첫 요소 index, 마지막 요소 index+1)
+
+## 사용자 정의 객체
+
+### 객체 생성 및 특징
+
+- 사용자 정의 객체 생성
+	- 객체 리터럴로 직접 생성
+	- Object 객체를 이용하여 사용자 객체 생성
+	- 생성자 함수를 이용하여 객체 정의하고 new를 통해 객체 생성
+	- class 키워드를 이용하여 클래스 정의하고 객체 생성
+- 객체 생성 후 속성 및 메소드를 언제라도 추가 가능
+- 점(dot, ".") 연산자를 붙혀서 속성과 메소드 접근
+- 다양한 변수 형을 속성으로 사용 가능
+	- ex) 문자열과 숫자형을 동시에 사용 가능
+- 객체의 계층적 구조
+	- 객체의 속성 값으로 또 다른 객체 사용 가능
+
+### 객체의 접근 방식
+1. 점(dot, ".") 연산자를 이용
+2. 배열 표시 방식("[ ]")
+
+- 속성을 삭제하기 위해서는 delete라는 명령어 이용
+```js
+// 객체의 속성 접근 방법
+var property1 = book.title;
+var property2 = book.info.price;
+
+// 혹은
+var property3 = book["title"];
+var property2 = book.info["price"];
+
+// 객체의 속성 삭제 방법
+delete book.title;
+delete book.info.price;
+  ```
+
+### 객체의 접근
+- 객체에 포함된 속성의 개수나 이름을 모르더라도 객체 내의 모든 속성을 접근할 수 있는 방법
+- 객체 접근 방식은 점(".")에 의한 접근은 불가능하며 배열 방식("[ ]") 사용
+- foreach 반복문은 배열 객체에만 사용 (ES6부터는 Map, Set 지원)
+
+#### 개선 반복문
+##### for in
+- 속성의 이름을 모르기 때문에 점(".") 접근 방식은 사용 불가
+``` js
+var obj = { a: '가', b: '나', c: '다' };
+
+for (var key in obj) {
+	console.log (key, obj[key]); // a 가, b 나, c 다
+}
+```
+##### for of
+- Symbol.iterator 속성을 가지고 있는 컬렉션 전용 반복문 for of 문과 비교
+```js
+var iterable = [10, 20, 30];
+
+for (var value of iterable) {
+	console.log(value); // 10, 20, 30
+}
+```
