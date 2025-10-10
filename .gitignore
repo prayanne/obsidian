@@ -1,8 +1,10 @@
-.obsidian/
+!.obsidian/*
 
 .obsidian/workspace-mobile.json
 .obsidian/workspace.json
 .obsidian/app.json
+
+.obsidian/plugins/copilot/data.json
 
 .trash/
 .DS_Store
